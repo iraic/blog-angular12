@@ -4,7 +4,7 @@
         <div class="col m-3">
             <div class="card" style="width: 18rem;" ng-cloak>
                 <div class="card-header">
-                    
+                    {{titulo}}
                 </div>
                 <div class="card-body">
                     <div class="input-group mb-3">
@@ -12,18 +12,18 @@
                             <div class="input-group-text"><i class="bi bi-person-circle"></i></div>
                         </div>
                         <input type="text" class="form-control" id="user" 
-                        placeholder="Nombre de usuario">
+                        placeholder="Nombre de usuario" [(ngModel)]="user">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
                         </div>
                         <input type="password" class="form-control" id="password" 
-                        placeholder="Contraseña">
+                        placeholder="Contraseña" [(ngModel)]="pass">
                     </div>
                 </div>
                 <div class="card-footer text-center">
-                    <button type="button" class="btn btn-primary" id="entrar">Entrar</button>
+                    <button type="button" class="btn btn-primary" id="entrar" (click)="login()">Entrar</button>
                 </div>
             </div>
         </div>
